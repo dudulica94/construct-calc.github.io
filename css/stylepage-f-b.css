@@ -1,0 +1,116 @@
+@font-face{
+    font-family:ballpark;
+    src: url(../fonts/BALLW.TTF)
+}
+/*---------------------------*/
+body{
+  padding-bottom: 20px;
+  color: #5a5a5a;
+}
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+/*===CONTENT====================*/
+.fund-banda{
+    color: black;
+    font-size: 18px;
+    margin: 10px;
+}
+.block-form1{
+    margin-left: 23px;
+    display: inline;
+}
+.block-form{
+    display: inline;
+}
+input[type="text"]{
+    width: 120px;
+    height: 30px;
+    border-radius: 6px;
+    border: solid 2px rgba(0, 0, 0, 0.67);
+}
+select{
+    width: 120px;
+    height: 26px;
+    border-radius: 6px;
+    border: solid 2px rgba(0, 0, 0, 0.67);
+}
+h2.title{
+    text-align: center;
+    padding-bottom: 30px
+}
+#btnrezult{
+    border-radius: 6px;
+    width: 120px;
+    height: 40px;
+    margin-top: 10px;
+}
+#imgexe {
+    background-image: url('../img/pag-f-b/1s.jpg');
+    background-repeat: no-repeat;
+    width: 98%;
+    height: 320px;
+    background-size:contain;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+#lature{
+    display: none;
+}
+.form-radio{
+    margin-left: 30px;
+}
+#contain-rezult{
+    display: none;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+@media(max-width:990px){
+    .form-radio{margin-left: 0px;}
+    #imgexe {width: 300px;height: 200px;float: left;}
+}
+@media(max-width:680px){
+    #imgexe {width: 230px;height: 140px;}
+    #btn-rezult{margin-left: 26px;}
+}
+@media(max-width:500px){
+    #imgexe {width: 230px;height: 140px;}
+    #btn-rezult{margin-left: 26px;}
+}
+/*===FOOTER====================*/
+.div-footer2 p{
+    display: inline;
+}
+.div-footer2 div{
+    float: right;
+}
+
+.div-footer a{
+    text-decoration:underline;
+    color: dimgrey;
+}

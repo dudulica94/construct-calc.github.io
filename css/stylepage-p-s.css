@@ -1,0 +1,150 @@
+@font-face{
+    font-family:ballpark;
+    src: url(../fonts/BALLW.TTF)
+}
+/*---------------------------*/
+body{
+  padding-bottom: 20px;
+  color: #5a5a5a;
+}
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+/*===CONTENT====================*/
+.fund-banda{
+    color: black;
+    font-size: 18px;
+    margin: 10px;
+}
+
+form>div>img{
+    height: 19px;
+    margin: 2px;
+    padding-bottom: 3px
+}
+
+.block-form1{
+    margin-left: 12px;
+}
+.block-form{
+    display: inline;
+    border: solid 2px rgba(0, 0, 0, 0.67);
+    border-radius: 5px;
+}
+input[type="text"]{
+    width: 120px;
+    height: 30px;
+    border-radius: 6px;
+    border: solid 2px rgba(0, 0, 0, 0.67);
+}
+input.usi-fer{
+    width: 78px;
+    height: 30px;
+}
+select{
+    width: 120px;
+    height: 30px;
+    border-radius: 6px;
+    border: solid 2px rgba(0, 0, 0, 0.67);
+    text-align: center;
+}
+.sel-uf{
+    width: 78px;
+    text-align: center;
+}
+h2.title{
+    text-align: center;
+    padding-bottom: 30px
+}
+#btnrezult{
+    border-radius: 6px;
+    width: 120px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+#imgexe {
+    background-image: url('../img/pag-p-f/s1.jpg');
+    background-repeat: no-repeat;
+    width: 98%;
+    height: 220px;
+    background-size:contain;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-left: 80px;
+}
+#imgexe1 {
+    background-image: url('../img/pag-p-c/0.jpg');
+    background-repeat: no-repeat;
+    width: 98%;
+    height: 220px;
+    background-size:contain;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-left: 40px;
+}
+#lature{
+    display: none;
+}
+#contain-rezult{
+    display: block;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+@media(max-width:990px){
+    #imgexe {width: 370px;height: 200px;float: left; margin-left: -10px;}
+    #imgexe1 {width: 3670px;height: 200px;float: left; margin-left: -10px;}
+    .form-radio{margin-left: 1px;}
+}
+@media(max-width:680px){
+    #imgexe {width: 235px;height: 140px;}
+    #imgexe1 {width: 235px;height: 140px;}
+    #btn-rezult{margin-left: 26px;}
+    .form-radio{margin-left: 1px;}
+    .block-form{display: block;margin-left: 1px;width: 100px;}
+    .block-form1{display: block;margin-left: 1px;width: 100px;}
+}
+@media(max-width:500px){
+    #imgexe {width: 230px;height: 140px;}
+    #imgexe1 {width: 230px;height: 140px;}
+    #btn-rezult{margin-left: 30px;}
+    .form-radio{margin-left: 1px;}
+    .block-form{display: block;margin-left: 1px;width: 100px;}
+    .block-form1{display: block;margin-left: 1px;width: 100px;}
+}
+/*===FOOTER====================*/
+.div-footer2 p{
+    display: inline;
+}
+.div-footer2 div{
+    float: right;
+}
+
+.div-footer a{
+    text-decoration:underline;
+    color: dimgrey;
+}

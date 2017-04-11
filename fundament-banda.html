@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/stylepage-f-b.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <script src="js/f-b-page.js"></script>
+  </head>
+  <body>
+   
+   <!-- NAVBAR 
+==============================================-->
+    <div class="navbar-wrapper">
+        <div class="container">
+            <nav class="navbar navbar-inverse navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="Index.html">Construct Calc</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="Index.html">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <!--EXTERIOR=====================-->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Exterior <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-header">Fundament</li>
+                                    <li><a href="fundament-banda.html">Banda</a></li>
+                                    <li><a href="fundament-plita.html">Placa</a></li>
+                                    <!--<li><a href="#">Piloni</a></li>-->
+                                    <li role="separator" class="divider"></li>
+                                    <li class="dropdown-header">Pereti</li>
+                                    <li><a href="perete-caramida.html">Caramida</a></li>
+                                    <li><a href="perete-fortan.html">Fortan</a></li>
+                                    <li><a href="perete-silicat.html">Blocuri de silicat</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li class="dropdown-header">Acoperis</li>
+                                    <li><a href="#">O scurgere</a></li>
+                                    <li><a href="#">Doua scurgeri</a></li>
+                                    <li><a href="#">Patru scurgeri</a></li>
+                                    <li><a href="#">Mansarda</a></li>
+                                    </ul></li>
+                            <!--INTERIOR=====================-->
+                             <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Interior <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Gresie</a></li>
+                                    <li><a href="#">Gips carton</a></li>
+                                    <li><a href="#">Tapet</a></li>
+                                    <li><a href="#">Parchet/Laminat</a></li>
+                                    
+                                    </ul></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav> 
+        </div>
+    </div>
+    <!-- CONTENT 
+==============================================-->
+     <div class="container">
+        <h2 class="title">Calcularea cantitatii de beton si armatura pentru fundament tip banda</h2>
+         <div class="row fund-banda">
+             <div class="col-md-3 col-md-offset-3"><p>Tip fundament</p></div>
+         <div class="col-md-6">
+                
+                <form action="" class="form-radio">
+                    <div class="block-form">
+                        <input type="radio" checked name="radio" value="option1" id="option1" onclick="MyCalc();">
+                        <img src="img/pag-f-b/mf1s.jpg" alt="">
+                    </div>
+                    <div class="block-form1">
+                        <input type="radio" name="radio" value="option2" id="option2" onclick="MyCalc();">
+                        <img src="img/pag-f-b/mf2s.jpg" alt="">
+                    </div>
+                    <div class="block-form1">
+                        <input type="radio" name="radio" value="option3" id="option3" onclick="MyCalc();">
+                        <img src="img/pag-f-b/mf3s.jpg" alt="">
+                    </div>
+                    <div class="block-form1">
+                        <input type="radio" name="radio" value="option4" id="option4" onclick="MyCalc();">
+                        <img src="img/pag-f-b/mf4s.jpg" alt="">
+                    </div>
+                </form></div>
+         </div>
+         <div class="row fund-banda">
+             <div class="col-md-4 col-md-offset-3">
+                 <p>Latimea fundamentului A</p>
+             </div>
+             <div class="col-md-5">
+                 <input type="text" class="inp-sel-style" id="Lat">
+             </div>
+         </div><!--Latimea-Lung-->
+         <div class="row fund-banda">
+             <div class="col-md-4 col-md-offset-3">
+                 <p>Lungimea fundamentului B</p>
+             </div>
+             <div class="col-md-5 ">
+                 <input type="text" class="inp-sel-style" id="Lung">
+             </div>
+         </div><!--Lungimea-Lat-->
+         <div class="row fund-banda" id="lature">
+             <div class="col-md-4 col-md-offset-3">
+                 <p>Lungimea laturi din mijloc E</p>
+             </div>
+             <div class="col-md-5">
+                 <input type="text" class="inp-sel-style" id="LatE">
+             </div>
+         </div><!--Grosimea-LatE-->
+         <div class="row fund-banda">
+             <div class="col-md-4 col-md-offset-3">
+                 <p>Inaltimea fundamentului C</p>
+             </div>
+             <div class="col-md-5">
+                 <input type="text" class="inp-sel-style" id="H" >
+             </div>
+         </div><!--Inaltimea-H-->
+         <div class="row fund-banda">
+             <div class="col-md-4 col-md-offset-3">
+                 <p>Grosimea fundamentului D</p>
+             </div>
+             <div class="col-md-5">
+                 <input type="text" class="inp-sel-style" id="G">
+             </div>
+         </div><!--Grosimea-G-->
+         <!--<div class="row fund-banda" id="lature">
+             <div class="col-md-4 col-md-offset-3">
+                 <p>Lungimea laturi din mijloc E</p>
+             </div>
+             <div class="col-md-5">
+                 <input type="text" class="inp-sel-style" id="LatE">
+             </div>
+         </div><!--Grosimea-LatE-->
+         <div class="row">
+         <div class="col-md-6 col-md-offset-3">
+         <div  id="imgexe"></div>
+         </div></div>
+         <div class="row fund-banda">
+         <div class="col-md-2 col-md-offset-5">
+             <input id="btnrezult" type="submit" onclick="MyCalc()" value="Calculeaza">
+         </div>
+         </div><!--BTN-->
+         
+         <div class="container" id="contain-rezult">
+             <div class="row">
+                 <div class="col-md-4 col-md-offset-3">
+                 <p>Cantitatea de beton pentru fundaţie:</p>
+             </div>
+             <div class="col-md-5">
+                 <p><span id="rezcantbeton"></span> m3</p>
+             </div>
+             </div><!--rez-cant-beton-->
+             
+             <div class="row">
+                 <div class="col-md-4 col-md-offset-3">
+                 <p>Amprenta la sol a fundaţiei:</p>
+             </div>
+             <div class="col-md-5">
+                 <p><span id="rezamprenta"></span> m2</p>
+             </div>
+             </div><!--rez-amprenta-->
+             
+             <hr></hr>
+             <div class="row">
+                 <div class="col-md-4 col-md-offset-3">
+                 <p>Numarul de vergi metalice(12):</p>
+             </div>
+             <div class="col-md-5">
+                 <p><span id="rezvergi"></span> unități</p>
+             </div>
+             </div><!--rezvergi-->
+             
+             <div class="row">
+                 <div class="col-md-4 col-md-offset-3">
+                 <p>Metri de vergi metalice:</p>
+             </div>
+             <div class="col-md-5">
+                 <p><span id="rezmetrvergi"></span> m</p>
+             </div>
+             </div><!--rezmetrvergi-->
+             
+             <div class="row">
+                 <div class="col-md-4 col-md-offset-3">
+                 <p>Greutate vergi metalice:</p>
+             </div>
+             <div class="col-md-5">
+                 <p><span id="rezkgvergi"></span> kg</p>
+             </div>
+             </div><!--rezkgvergi-->
+             
+             <hr></hr>
+             <div class="row">
+                 <div class="col-md-4 col-md-offset-3">
+                 <p>Numarul de vergi metalice(6):</p>
+             </div>
+             <div class="col-md-5">
+                 <p><span id="rezvergi6"></span> unități</p>
+             </div>
+             </div><!--rezvergi6-->
+             
+             <div class="row">
+                 <div class="col-md-4 col-md-offset-3">
+                 <p>Metri de vergi metalice:</p>
+             </div>
+             <div class="col-md-5">
+                 <p><span id="rezmetrvergi6"></span> m</p>
+             </div>
+             </div><!--rezmetrvergi6-->
+             
+             <div class="row">
+                 <div class="col-md-4 col-md-offset-3">
+                 <p>Greutate vergi metalice:</p>
+             </div>
+             <div class="col-md-5">
+                 <p><span id="rezkgvergi6"></span> kg</p>
+             </div>
+             </div><!--rezkgvergi6-->
+             
+             <hr></hr>
+             <div class="row">
+                 <div class="col-md-4 col-md-offset-3">
+                 <p>Zona de cofraje:</p>
+             </div>
+             <div class="col-md-5">
+                 <p><span id="rezcofraje"></span> m2</p>
+             </div>
+             </div><!--rezcofraje-->
+             <div class="row">
+                 <div class="col-md-4 col-md-offset-3">
+                 <p>Cherestea:</p>
+             </div>
+             <div class="col-md-5">
+                 <p><span id="rezcherestea"></span> scînduri</p>
+             </div>
+             </div><!--rezcherestea-->
+             
+         </div><!--REZULTATE-->
+     </div>
+     
+    <!-- FOOTER
+==============================================-->     
+      <div class="container"><hr class="divid"></hr></div>
+      <footer>
+          <div class="container">
+             <div class="col-lg-6 div-footer1 div-footer">
+              <a href="#" class="help">Ajutor</a>
+              <a href="#" class="contact">Contacte</a>
+              <a href="#" class="adaug">Adaugător pe site</a>
+              <a href="#" class="reclama">Reclamă</a>
+              </div>
+              <div class="col-lg-6 div-footer2 div-footer">
+                 <div>
+                  <a href="#" class="reclama">Construct-Calc</a>
+                  <p>- Calculator de materiale de construcție</p>
+                  </div>
+              </div>
+          </div>
+      </footer>
+      
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/f-b-page.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>

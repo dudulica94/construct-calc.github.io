@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/stylepage-p-f.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <script src="js/p-f-page.js"></script>
+  </head>
+  <body>
+   
+   <!-- NAVBAR 
+==============================================-->
+    <div class="navbar-wrapper">
+        <div class="container">
+            <nav class="navbar navbar-inverse navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="Index.html">Construct Calc</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="Index.html">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <!--EXTERIOR=====================-->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Exterior <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-header">Fundament</li>
+                                    <li><a href="fundament-banda.html">Banda</a></li>
+                                    <li><a href="fundament-plita.html">Placa</a></li>
+                                    <!--<li><a href="#">Piloni</a></li>-->
+                                    <li role="separator" class="divider"></li>
+                                    <li class="dropdown-header">Pereti</li>
+                                    <li><a href="perete-caramida.html">Caramida</a></li>
+                                    <li><a href="perete-fortan.html">Fortan</a></li>
+                                    <li><a href="perete-silicat.html">Blocuri de silicat</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li class="dropdown-header">Acoperis</li>
+                                    <li><a href="#">O scurgere</a></li>
+                                    <li><a href="#">Doua scurgeri</a></li>
+                                    <li><a href="#">Patru scurgeri</a></li>
+                                    <li><a href="#">Mansarda</a></li>
+                                    </ul></li>
+                            <!--INTERIOR=====================-->
+                             <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Interior <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Gresie</a></li>
+                                    <li><a href="#">Gips carton</a></li>
+                                    <li><a href="#">Tapet</a></li>
+                                    <li><a href="#">Parchet/Laminat</a></li>
+                                    
+                                    </ul></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav> 
+        </div>
+    </div>
+    <!-- CONTENT 
+==============================================-->
+     <div class="container">
+        <h2 class="title">Calcularea cantitatii de fortan pentru pereti</h2>
+         <div class="row fund-banda">
+             <div class="col-md-3 col-md-offset-3"><p>Tip perete</p></div>
+         <div class="col-md-6 ">
+                
+                <form action="" class="form-radio">
+                    <div class="block-form">
+                        <input type="radio" checked name="radio" value="option1" id="option1" onclick="MyCalc();">
+                        <img src="img/pag-f-b/mf5s.png" alt="">
+                        Perete
+                    </div>
+                    <div class="block-form1">
+                        <input type="radio" name="radio" value="option2" id="option2" onclick="MyCalc();">
+                        <img src="img/pag-f-b/mf1s.jpg" alt="">
+                        Casa
+                    </div>
+                </form></div>
+         </div>
+         <div class="row fund-banda">
+             <div class="col-md-4 col-md-offset-3">
+                 <p>Pret m3 fortan</p>
+             </div>
+             <div class="col-md-5">
+                 <input type="text" class="inp-sel-style" id="Pret">
+             </div>
+         </div><!--Pret-Pret-->
+         <div class="row fund-banda" id="Latime">
+             <div class="col-md-4 col-md-offset-3">
+                 <p>Latimea peretelui</p>
+             </div>
+             <div class="col-md-5">
+                 <input type="text" class="inp-sel-style" id="Lat">
+             </div>
+         </div><!--Latimea-Lung-->
+         <div class="row fund-banda " id="Lungime">
+             <div class="col-md-4 col-md-offset-3">
+                 <p>Lungimea peretelui</p>
+             </div>
+             <div class="col-md-5 ">
+                 <input type="text" class="inp-sel-style" id="Lung">
+             </div>
+         </div><!--Lungimea-Lat-->
+         <div class="row fund-banda">
+             <div class="col-md-4 col-md-offset-3">
+                 <p>Inaltimea peretelui</p>
+             </div>
+             <div class="col-md-5">
+                 <input type="text" class="inp-sel-style" id="H" >
+             </div>
+         </div><!--Inaltimea-H-->
+         <div class="row fund-banda">
+             <div class="col-md-4 col-md-offset-3">
+                 <p>Grosimea peretelui</p>
+             </div>
+             <div class="col-md-5">
+                <select name="sel1" id="sel-g" onclick="MyCalc();">
+                    <option value="val1">(10 cm) 10x19x39</option>
+                    <option value="val2">(12 cm) 12x19x39</option>
+                    <option value="val3">(19 cm) 19x19x39</option>
+                    <option value="val4">(39 cm) 19x19x39</option>
+                </select>
+                 <!--<input type="text" class="inp-sel-style" id="G" >-->
+             </div>
+         </div><!--Grosimea-G-->
+         <div class="row fund-banda">
+             <div class="col-md-2 col-md-offset-2">
+                 <p>Usi</p>
+             </div>
+             <div class="col-md-2">
+                Numar
+                <select name="sel-u" id="sel-u" class="sel-uf" onclick="MyCalc();">
+                    <option value="valu1">0</option>
+                    <option value="valu2">1</option>
+                    <option value="valu3">2</option>
+                    <option value="valu4">3</option>
+                    <option value="valu5">4</option>
+                </select>
+                 <!--<input type="text" class="inp-sel-style usi-fer" id="NrU" >-->
+             </div>
+             <div class="col-md-2">
+                Latimea
+                 <input type="text" class="inp-sel-style usi-fer" id="LatU" >
+             </div>
+             <div class="col-md-2">
+                Inaltimea
+                 <input type="text" class="inp-sel-style usi-fer" id="HU" >
+             </div>
+         </div><!--Usi-->
+         <div class="row fund-banda">
+             <div class="col-md-2 col-md-offset-2">
+                 <p>Ferestre</p>
+             </div>
+             <div class="col-md-2">
+                Numar
+                <select name="sel-f" id="sel-f" class="sel-uf" onclick="MyCalc();">
+                    <option value="valf1">0</option>
+                    <option value="valf2">1</option>
+                    <option value="valf3">2</option>
+                    <option value="valf4">3</option>
+                    <option value="valf5">4</option>
+                </select>
+                 <!--<input type="text" class="inp-sel-style usi-fer" id="NrF" >-->
+             </div>
+             <div class="col-md-2">
+                Latimea
+                 <input type="text" class="inp-sel-style usi-fer" id="LatF" >
+             </div>
+             <div class="col-md-2">
+                Inaltimea
+                 <input type="text" class="inp-sel-style usi-fer" id="HF" >
+             </div>
+         </div><!--Usi-->
+         <div class="row">
+         <div class="col-md-4 col-md-offset-2">
+         <div  id="imgexe"></div>
+         </div>
+         <div class="col-md-4">
+         <div  id="imgexe1"></div>
+         </div>
+         </div>
+         <div class="row fund-banda">
+         <div class="col-md-2 col-md-offset-5">
+             <input id="btnrezult" type="submit" onclick="MyCalc2()" value="Calculeaza">
+         </div>
+         </div><!--BTN-->
+         
+         <div class="container" id="contain-rezult">
+             <div class="row">
+                 <div class="col-md-4 col-md-offset-3">
+                 <p>Cantitate caramida:</p>
+             </div>
+             <div class="col-md-5">
+                 <p><span id="rezcantcar"></span> m3</p>
+             </div>
+             </div><!--rez-cant-beton-->
+             
+             <div class="row">
+                 <div class="col-md-4 col-md-offset-3">
+                 <p>Unitati caramida:</p>
+             </div>
+             <div class="col-md-5">
+                 <p><span id="rezunit"></span> unitati</p>
+             </div>
+             </div><!--rez-amprenta-->
+             
+             <div class="row">
+                 <div class="col-md-4 col-md-offset-3">
+                 <p>Pret total:</p>
+             </div>
+             <div class="col-md-5">
+                 <p><span id="rezpret"></span> Lei</p>
+             </div>
+             </div><!--rez-amprenta-->
+         </div><!--REZULTATE-->
+     </div>
+     
+    <!-- FOOTER
+==============================================-->     
+      <div class="container"><hr class="divid"></hr></div>
+      <footer>
+          <div class="container">
+             <div class="col-lg-6 div-footer1 div-footer">
+              <a href="#" class="help">Ajutor</a>
+              <a href="#" class="contact">Contacte</a>
+              <a href="#" class="adaug">Adaugător pe site</a>
+              <a href="#" class="reclama">Reclamă</a>
+              </div>
+              <div class="col-lg-6 div-footer2 div-footer">
+                 <div>
+                  <a href="#" class="reclama">Construct-Calc</a>
+                  <p>- Calculator de materiale de construcție</p>
+                  </div>
+              </div>
+          </div>
+      </footer>
+      
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jquery-3.2.0.js"></script>
+    <script src="js/p-f-page.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>
